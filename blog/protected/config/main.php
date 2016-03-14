@@ -9,6 +9,9 @@ return array(
 	'basePath'=>dirname(__FILE__).DIRECTORY_SEPARATOR.'..',
 	'name'=>'My Web Application',
 
+	// 设置默认控制器
+	'defaultController' => 'index',
+	
 	// preloading 'log' component
 	'preload'=>array('log'),
 
@@ -38,7 +41,7 @@ return array(
 			'allowAutoLogin'=>true,
 		),
 
-		// uncomment the following to enable URLs in path-format
+		// uncomment the following to enable URLs in path-format 
 		/*
 		'urlManager'=>array(
 			'urlFormat'=>'path',
