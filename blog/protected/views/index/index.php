@@ -1,15 +1,44 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="zh-cn">
-<head>
-	<meta http-equiv="Content-Type" content="text/html;charset=UTF-8" />
-	<title>新网页标题</title>
-	<meta name="keywords" content="关键字列表" />
-	<meta name="description" content="网页描述" />
-	<link rel="stylesheet" type="text/css" href="" />
-	<style type="text/css"></style>
-	<script type="text/javascript"></script>
-</head>
-<body>
-	<h1>hello world Yii1 </h1>
-</body>
-</html>
+<link href="<?php echo CSS_URL;  ?>index.css" rel="stylesheet" />
+	<div id="main">
+		<div class='content'>
+			<div  class='list'>
+				<div class='title'>
+					<h2>最新文章.. </h2>
+				</div>
+				<ul>
+				<?php foreach ($articleNew as $k => $v): ?>
+					<li>
+						<div class='post-image'>
+							<span>
+								<a href="<?php echo $this->createUrl('article/index', array('aid'=>$v->aid)) ?>"><img width="" src="<?php echo BASEPATH ?>uploads/<?php echo $v->thumb ?>" /></a>
+							</span>	
+						</div>	
+						<div class='post-content'>
+							<a href="<?php echo $this->createUrl('article/index', array('aid'=>$v->aid)) ?>"><h3><?php echo $v->title ?></h3></a>
+							<p><?php echo $v->info ?></p>
+						</div>
+					</li>
+				<?php endforeach ?>
+				</ul>
+			</div>
+			<div  class='list'>
+				<div class='title'>
+					<h2>热门文章..</h2>
+				</div>
+				<ul>
+				<?php foreach($aritcleHot as $v): ?>
+					<li>
+						<div class='post-image'>
+							<span>
+								<a href="<?php echo $this->createUrl('article/index', array('aid'=>$v->aid)) ?>"><img width="" src="<?php echo BASEPATH ?>/uploads/<?php echo $v->thumb ?>" /></a>
+							</span>	
+						</div>	
+						<div class='post-content'>
+							<a href="<?php echo $this->createUrl('article/index', array('aid'=>$v->aid)) ?>"><h3><?php echo $v->title ?></h3></a>
+							<p><?php echo $v->info ?></p>
+						</div>
+					</li>
+				<?php endforeach ?>
+				</ul>
+			</div>
+		</div>

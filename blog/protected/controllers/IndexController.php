@@ -6,7 +6,7 @@
  */
 class IndexController extends Controller
 {
-
+	
 	/**
 	 * Index 主方法
 	 * @author Red-Bo
@@ -14,9 +14,19 @@ class IndexController extends Controller
 	 */
 	public function actionIndex()
 	{
-		// echo "Hellow Yii1";
-		// 渲染视图| render会渲染布局 rednerPartial 则不会渲染视图 
-		// $this->renderPartial('index'); 
-		$this->render('index');
+		// 使用原生sql 语句查询相关数据
+		$sqlNew = "SELECT thumb,aid,title,info FROM {{article}} WHERE type=0 ORDER BY time DESC";
+		$sqlHot ="SELECT thumb,aid,title,info FROM {{article}} WHERE type=1 ORDER BY time DESC";
+		$articleModel = Article::model();
+
+		$articleNew = $articleModel->findAllBySql($sqlNew);
+		$aritcleHot = $articleModel->findAllBySql($sqlNew);
+
+		$data = array(
+			'articleNew' => $articleNew,
+			'aritcleHot' => $aritcleHot,
+		);
+		// 页面数据渲染
+		$this->render('index',$data);
 	}
 }
