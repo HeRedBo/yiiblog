@@ -25,3 +25,11 @@ CREATE TABLE `yii_article` (
 	`cid` mediumint unsigned NOT NULL DEFAULT '0' COMMENT '博客分类',
 	PRIMARY KEY(`aid`)
 )  ENGINE=InnoDB DEFAULT CHARSET = utf8 COMMENT '博客文章表';
+
+# 博客分类表
+DROP TABLE IF EXISTS `yii_category`;
+CREATE TABLE `yii_category` (
+	`cid` int(10) unsigned NOT NULL AUTO_INCREMENT COMMENT '分类id',
+	`cname` varchar(30) NOT NULL DEFAULT "" COMMENT '分类名称',
+	PRIMARY KEY (`cid`)
+)

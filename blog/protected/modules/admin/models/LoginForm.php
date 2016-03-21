@@ -12,7 +12,9 @@ class LoginForm extends CFormModel
 {
 	public $username;
 	public $password;
+	public $verifyCode;
 	public $rememberMe;
+
 	private $_identity;
 
 	/**
@@ -26,11 +28,13 @@ class LoginForm extends CFormModel
 			// username and password are required
 			array('username', 'required','message' => '用户名必须填写！'),
 			array('password', 'required','message' => '密码不能为空！'),
+			array('verifyCode', 'required','message' => '验证码不能为空！'),
 			// rememberMe needs to be a boolean
 			array('rememberMe', 'boolean'),
 			// password needs to be authenticated
 			array('password', 'authenticate'),
-			array('captcha', 'required','message' => '验证码输入错误！'),
+			// 验证验证码
+			array('verifyCode', 'captcha','message' => '验证码输入错误！'),
 		);
 	}
 

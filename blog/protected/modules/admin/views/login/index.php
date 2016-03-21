@@ -18,13 +18,13 @@
 			<!-- <input type="password" id="psd" name=""/> -->
 			<?php echo $form->textField($loginForm,'password',array('id' =>'psd')); ?>
 		<!-- 	<input type="" value="" id="verify" name=""/> -->
-			<?php echo $form->textField($loginForm,'captcha',array('id' => 'verify')); ?>
+			<?php echo $form->textField($loginForm,'verifyCode',array('id' => 'verify')); ?>
 			<input type="submit" id="sub" value=""/>
 			<!-- 验证码 -->
 			<div class="captcha">
 				<?php $this->widget(
 					'CCaptcha' , array(
-						'showRefreshButton' => false,
+						'showRefreshButton' => true,
 						'clickableImage' => true,
 						'imageOptions' => array('alt' => '点击换图','title' => '点击换图','style' => 'cursor:pointer' ,'id' => 'verify_img'),
 
@@ -48,7 +48,7 @@
 			<li class="error"><?php echo $form->error($loginForm,'password'); ?></li>
 		</ul>
 		<ul id="ver">
-			<li class="error"><?php echo $form->error($loginForm,'captcha'); ?></li>
+			<li class="error"><?php echo $form->error($loginForm,'verifyCode'); ?></li>
 		</ul>
 	</div>
 

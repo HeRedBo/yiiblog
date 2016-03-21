@@ -4,6 +4,7 @@ class AdminModule extends CWebModule
 {
 	public function init()
 	{
+
 		// this method is called when the module is being created
 		// you may place code here to customize the module or the application
 
@@ -11,6 +12,13 @@ class AdminModule extends CWebModule
 		$this->setImport(array(
 			'admin.models.*',
 			'admin.components.*',
+		));
+
+		// 为后台登录设立管理session 名字前缀
+		yii::app()->setComponents(array(
+			'user' => array(
+				'stateKeyPrefix' => 'admin',
+			)
 		));
 	}
 

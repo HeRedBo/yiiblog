@@ -4,6 +4,12 @@ class DefaultController extends Controller
 {
 	public function actionIndex()
 	{
-		$this->render('index');
+
+		$this->renderPartial('index','','','',$processOutput=true);
+	}
+
+	public function actionCopy()
+	{
+		$this->renderPartial('copy');
 	}
 }

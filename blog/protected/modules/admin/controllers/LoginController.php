@@ -28,7 +28,7 @@
 
      		}
      	}
-        $this->renderPartial('index',array('loginForm' => $loginForm));
+        $this->renderPartial('index',array('loginForm' => $loginForm),$return=false,$processOutput=true);
      }
  	
  	/**
@@ -66,5 +66,16 @@
  	}
  	*/
 
+     /**
+      * 用户退出后台系统 || 清除服务器上的session 
+      * 
+      * @author Red-Bo
+      * @date 2016-03-18 13:32:50
+      */
+     public function actionlayout()
+     {
+          
+     }
  	
+     /**************************  ************************/
  } ?>
