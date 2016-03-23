@@ -4,7 +4,7 @@
 	<meta http-equiv="Content-Type" content="text/html;charset=UTF-8" />
 	<script type="text/javascript" src="<?php echo ADMIN_JS_URL; ?>jquery-1.7.2.min.js"></script>
 	<link rel="stylesheet" href="<?php echo ADMIN_CSS_URL ?>public.css" />
-	<title>栏目添加</title>
+	<title>栏目编辑</title>
 		<style type="text/css">
 		span{
 			color: #f00;
@@ -21,7 +21,7 @@
 		)) ;?>
 		<table class="table">
 			<tr >
-				<td class="th" colspan="2">栏目添加</td>
+				<td class="th" colspan="2">修改栏目</td>
 			</tr>
 			<tr>
 				<td><?php echo $form->labelEx($categoryModel,'cname'); ?></td>

@@ -73,7 +73,7 @@
 						<div class="text">
 							<ul class="con">
 						        <li class="nav_u">
-						        	<a href="<?php echo $this->createUrl('/'); ?>" class="pos">前台首页</a>				        	
+						        	<a href="<?php echo $this->createUrl('/'); ?>" class="pos" target = "_blank" >前台首页</a>				        	
 						        </li> 
 						    </ul>
 						    <ul class="con">
