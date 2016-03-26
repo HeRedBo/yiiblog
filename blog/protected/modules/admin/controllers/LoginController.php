@@ -67,15 +67,17 @@
  	*/
 
      /**
-      * 用户退出后台系统 || 清除服务器上的session 
+      * 用户退出后台系统 || 清除服务器上的session || 使用yii 的退出操作
       * 
       * @author Red-Bo
       * @date 2016-03-18 13:32:50
       */
-     public function actionlayout()
+     public function actionLayout()
      {
-          
+        yii::app()->user->logout();
+        $this->redirect(array('index'));
+
      }
- 	
+    
      /**************************  ************************/
  } ?>

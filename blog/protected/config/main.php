@@ -40,6 +40,11 @@ return array(
 			// enable cookie-based authentication
 			'allowAutoLogin'=>true,
 		),
+		// 扩展自定义的缩略类
+		'thumb' =>  array(
+			'class' => 'ext.Thumb.CThumb', //路径别名
+		),
+		
 
 		// uncomment the following to enable URLs in path-format 
 		/*

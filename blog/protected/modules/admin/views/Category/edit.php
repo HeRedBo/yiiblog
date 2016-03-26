@@ -40,7 +40,7 @@
 			</tr> -->
 			<tr>
 				<td colspan="2">
-					<input type="submit" value="添加" class="input_button"/>
+					<input type="submit" value="修改" class="input_button"/>
 					<input type="reset" class="input_button"/>
 				</td>
 			</tr>

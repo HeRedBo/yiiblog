@@ -12,7 +12,9 @@
 	define('BASEPATH',SITE_URL.'protected/');
 
 	// 后台系统常量设置
+	define('ADMIN_ASSETS',SITE_URL.'assets/admin/'); // 后台css js 等样式扩展目录
 	define('ADMIN_CSS_URL',SITE_URL.'assets/admin/css/');
 	define('ADMIN_IMG_URL',SITE_URL.'assets/admin/images/');
 	define('ADMIN_JS_URL',SITE_URL.'assets/admin/js/');
+
 	

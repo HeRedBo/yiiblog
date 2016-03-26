@@ -80,11 +80,14 @@ class CategoryController extends Controller
     	$categoryModel = Category::model();
     	$categoryInfo  = $categoryModel->findByPK($cid);
 
+
     	if(isset($_POST['Category']))
     	{
-    		$categoryModel->attributes = $_POST['Category'];
-        	if($categoryModel->save()){
-        		// 执行save 会自动执行数据验证
+            //$categoryModel->attributes = $_POST['Category'];
+    		$categoryInfo->attributes = $_POST['Category'];
+        	if($categoryInfo->save()){
+        		// 执行save 会自动执行数据验证 
+                //  更新操作成功跳转到首页
 				$this->redirect(array('index'));
 			}
     	}

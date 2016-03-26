@@ -31,15 +31,7 @@ class Category extends CActiveRecord
 		);
 	}
 
-	/**
-	 * @return array relational rules.
-	 */
-	public function relations()
-	{
-		return array(
-		);
-	}
-
+	
 	/**
 	 * @return array customized attribute labels (name=&gt;label)
 	 */
