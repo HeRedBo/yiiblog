@@ -33,3 +33,14 @@ CREATE TABLE `yii_category` (
 	`cname` varchar(30) NOT NULL DEFAULT "" COMMENT '分类名称',
 	PRIMARY KEY (`cid`)
 )
+
+# 文件上传测试表
+DROP TABLE IF EXISTS `yii_companynews`;
+CREATE TABLE `yii_companynews` (
+	`id` int unsigned not null  AUTO_INCREMENT,
+	`news_pic` varchar(200) not null DEFAULT '' COMMENT '图片表',
+	`add_time` int not null DEFAULT 0 COMMENT '0',
+	PRIMARY KEY(`id`)
+) ENGINE=MyISAM CHARSET utf8 COMMENT '图片上传测试表';
+
+
