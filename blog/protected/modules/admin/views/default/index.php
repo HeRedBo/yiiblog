@@ -49,7 +49,7 @@
 				        	<a href="<?php echo $this->createUrl('article/Index') ?>" class="pos">文章列表</a>				        	
 				        </li> 
 				    </ul>
-				  
+
 				</div>
 			</div>	
 			<div class="menu_box">
@@ -67,7 +67,24 @@
 				    </ul>
 				   
 				</div>
-			</div>			
+			</div>	
+				<div class="menu_box">
+				<h2>图片测试</h2>
+				<div class="text">
+					<ul class="con">
+				        <li class="nav_u">
+				        	<a href="<?php echo $this->createUrl('Upload/Create'); ?>" class="pos">添加图片</a>				        	
+				        </li> 
+				    </ul>
+					<ul class="con">
+				        <li class="nav_u">
+				        	<a href="<?php echo $this->createUrl('Upload/Index'); ?>" class="pos">图片列表</a>
+				        </li> 
+				    </ul>
+					
+				   
+				</div>
+			</div>					
 			<div class="menu_box">
 						<h2>常用菜单</h2>
 						<div class="text">
