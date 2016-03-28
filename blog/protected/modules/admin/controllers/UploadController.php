@@ -9,9 +9,10 @@ class UploadController extends Controller
 {
 	public function actionIndex()
 	{
-		$model = Companynews::model();
+		$model   = Companynews::model();
 		$imgData = $model->findAll();
-		date_default_timezone_set('PRC');
+
+		date_default_timezone_set('PRC'); // 设置系统的默认时区
 		$this->render('index',array('model' => $imgData));
 	}
 
@@ -47,7 +48,7 @@ class UploadController extends Controller
 			{
 				if(is_object($file)&&get_class($file) === 'CUploadedFile')
 				{
-				$file->saveAs($model->news_pic);    // 上传图片
+					$file->saveAs($model->news_pic);    // 上传图片
 				}
 				$this->redirect(array('Index','id'=>$model->id));
 			} 
@@ -61,10 +62,10 @@ class UploadController extends Controller
 
 
 	/**
-	* Updates a particular model.
-	* If update is successful, the browser will be redirected to the 'view' page.
-	* @param integer $id the ID of the model to be updated
-	*/
+	 * Updates a particular model.
+	 * If update is successful, the browser will be redirected to the 'view' page.
+	 * @param integer $id the ID of the model to be updated
+	 */
 	public function actionUpdate($id)
 	{
 		$model = Companynews::model();
@@ -74,8 +75,7 @@ class UploadController extends Controller
 		
 		if(isset($_POST['Companynews']))
 		{   
-
-		    $imageurl = $model->news_pic;
+		    $imageurl = $ImageInfo->news_pic;
 			$file = CUploadedFile::getInstance($model,'news_pic');   //获得一个CUploadedFile的实例
 		     if(is_object($file)&&get_class($file) === 'CUploadedFile')
 		     {   // 判断实例化是否成功

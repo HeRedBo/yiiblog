@@ -5,11 +5,13 @@
 	<script type="text/javascript" src="<?php echo ADMIN_JS_URL; ?>jquery-1.7.2.min.js"></script>
 	<link rel="stylesheet" href="<?php echo ADMIN_CSS_URL ?>public.css" />
 
-	<!-- 富文本编辑器 -->
-	<!-- 编辑器源码文件 -->
-	<script type="text/javascript" src="<?php echo ADMIN_ASSETS; ?>ueditor/ueditor.all.min.js"></script>
+	<!-- 富文本编辑器(start) -->
 	<!-- 配置文件 -->
 	<script type="text/javascript" src="<?php echo ADMIN_ASSETS; ?>ueditor/ueditor.config.js"></script>
+	<!-- 编辑器源码文件 -->
+	<script type="text/javascript" src="<?php echo ADMIN_ASSETS; ?>ueditor/ueditor.all.min.js"></script>
+	<!-- 富文本编辑器( end ) -->
+	
 	
 
 
@@ -113,15 +115,15 @@
   // 方法一 
   //var ue = UE.getEditor('content');
 
- /* UE.getEditor('content',{
+  UE.getEditor('content',{
     "initialFrameWidth":"100%",//寛
     "initialFrameHeight":350,//高
     "maximumWords" : 50000
-  });*/
-		window.UEDITOR_HOME_URL = "<?php ADMIN_ASSETS;?>ueditor/"
+  });
+		/*window.UEDITOR_HOME_URL = "<?php ADMIN_ASSETS;?>ueditor/"
 		window.onload = function () {
 			window.UEDITOR_CONFIG.initialFrameWidth = 900;
 			//window.UEDITOR_CONFIG.initialFrameHeight = 20%;
 			UE.getEditor('content');
-		}
+		}*/
 </script>

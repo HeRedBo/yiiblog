@@ -95,19 +95,35 @@ class CategoryController extends Controller
     }
 	// -----------------------------------------------------------
 	// Uncomment the following methods and override them if needed
-	/*
 	public function filters()
-	{
-		// return the filter configuration for this controller, e.g.:
-		return array(
-			'inlineFilterName',
-			array(
-				'class'=>'path.to.FilterClass',
-				'propertyName'=>'propertyValue',
-			),
-		);
-	}
+    {
+        // return the filter configuration for this controller, e.g.:
+        return array(
+              'accessControl'
+        );
+    }
 
+    /**
+     * 设置过滤权限
+     * @author Red-Bo
+     * @date 2016-03-29 00:36:16
+     */
+    public function accessRules()
+    {
+        // 先允许所有登录的用户进行操作
+        return array(
+            array(
+                'allow',
+                'actions' => array('Index','Del','Add','Edit'),
+                'users' => array('@')
+            ),
+            array(
+                'deny',
+                'users' => array('*'),
+            ),
+        );
+
+    }
 	public function actions()
 	{
 		// return external action classes, e.g.:

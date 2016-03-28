@@ -5,11 +5,15 @@
 	<script type="text/javascript" src="<?php echo ADMIN_JS_URL; ?>jquery-1.7.2.min.js"></script>
 	<link rel="stylesheet" href="<?php echo ADMIN_CSS_URL ?>public.css" />
 
-	<!-- 富文本编辑器 -->
-	<!-- 编辑器源码文件 -->
-	<script type="text/javascript" src="<?php echo ADMIN_ASSETS; ?>ueditor/ueditor.all.min.js"></script>
+	<!-- 富文本编辑器(start) -->
 	<!-- 配置文件 -->
 	<script type="text/javascript" src="<?php echo ADMIN_ASSETS; ?>ueditor/ueditor.config.js"></script>
+
+	<!-- 编辑器源码文件 -->
+	<script type="text/javascript" src="<?php echo ADMIN_ASSETS; ?>ueditor/ueditor.all.min.js"></script>
+
+	<!-- 富文本编辑器( end ) -->
+
 	
 
 
@@ -75,8 +79,10 @@
 			<tr>
 				<td><?php echo $form->labelEx($articleModel,'thumb'); ?></td>
 				<td>
+					<?php echo Yii::app()->baseUrl ; ?>
+					<img src="<?php echo Yii::app()->baseUrl.'/uploads/'.$articleModel->thumb; ?>" alt="" />
 					<?php echo $form->fileField($articleModel,'thumb'); ?>
-					<?php echo $form->error($articleModel,'thumb'); ?>
+					<?php echo $form->error($articleModel,'thumb'); ?> 
 				</td>
 			</tr>
 			<!-- 摘要 -->

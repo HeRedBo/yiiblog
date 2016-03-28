@@ -16,6 +16,7 @@
 			<td>ID</td>
 			<td>标题</td>
 			<td>栏目</td>
+			<td>文章缩略图</td>
 			<td>发布时间</td>
 			<td>操作</td>
 		</tr>
@@ -25,6 +26,7 @@
 				<td><?php echo $v->aid; ?></td>
 				<td><?php echo $v->title ?></td>
 				<td><?php echo $v->cid; ?></td>
+				<td><img src="uploads/<?php echo $v->thumb; ?>" width="110" alt="" /></td>
 				<td><?php echo date('h:i:s',$v->time); ?></td>
 				<td>
 					<a href="<?php echo $this->createUrl('Edit',array('aid' => $v->aid)); ?>" >[编辑]</a>

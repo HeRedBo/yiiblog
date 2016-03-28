@@ -38,7 +38,10 @@ return array(
 
 		'user'=>array(
 			// enable cookie-based authentication
-			'allowAutoLogin'=>true,
+			// 设置后台自动登录的跳转地址
+			'allowAutoLogin' =>true,
+			'loginUrl' => array('admin/login/index'),
+
 		),
 		// 扩展自定义的缩略类
 		'thumb' =>  array(

@@ -38,12 +38,12 @@ class ArticleController extends Controller
 			if($articleModel->thumb) {
 				$preRand = 'img_'.time().mt_rand(0,9999); // 商品的图片 
 				$imgName = $preRand . '.' .$articleModel->thumb->extensionName;
-				$articleModel->thumb->saveAs(yii::app()->basePath.'/uploads/'.$imgName);
+				$articleModel->thumb->saveAs(Yii::app()->baseUrl.'/uploads/'.$imgName);
 				//$articleModel->thumb->saveAs('uploads/' . $imgName); // 这这种方式上传不了
 				$articleModel->thumb = $imgName;
 
 				//制作缩略图
-				$path = yii::app()->basePath .'/uploads/';
+				$path = Yii::app()->baseUrl.'/uploads/';
 				$thumb = yii::app()->thumb;
 				$thumb->image = $path.$imgName;
 				$thumb->width = 130;
@@ -132,16 +132,17 @@ class ArticleController extends Controller
 
 		// 处理提交数据信息
 		if(isset( $_POST['Article']) ) {
+            $imageurl = $articleInfo->thumb;
+            $articleInfo->attributes = $_POST['Article'];
 			// 使用 yii框架图片类图片
-			$articleInfo->thumb = CUploadedFile::getInstance($articleModel,'thumb');
+            $articleInfo->thumb = CUploadedFile::getInstance($articleModel,'thumb');
 			if($articleInfo->thumb) {
 				$preRand = 'img_'.time().mt_rand(0,9999); // 商品的图片 
 				$imgName = $preRand . '.' .$articleInfo->thumb->extensionName;
-				$articleInfo->thumb->saveAs(yii::app()->basePath.'/uploads/'.$imgName);
-				//$articleModel->thumb->saveAs('uploads/' . $imgName); // 这这种方式上传不了
+				$articleInfo->thumb->saveAs('uploads/' . $imgName); // 
 				$articleInfo->thumb = $imgName;
 				//制作缩略图
-				$path = yii::app()->basePath .'/uploads/';
+				$path = dirname(Yii::app()->BasePath).'/uploads/';
 				$thumb = yii::app()->thumb;
 				$thumb->image = $path.$imgName;
 				$thumb->width = 130;
@@ -150,12 +151,18 @@ class ArticleController extends Controller
 				$thumb->directory = $path;
 				$thumb->defaultName = $preRand;
 				$thumb->createThumb();
-				$thumb->save();				
+				$thumb->save();
+                // 图片处理完成 删除就图片	
+                if(is_file($imageurl))
+                    unlink($imageurl);		
 			}
-			$articleInfo->attributes = $_POST['Article'];
+			
+            
 			//$articleInfo->time       = time();
 			if($articleInfo->save())
-				$this->redirect(array('index'));
+			{
+                $this->redirect(array('index'));
+            }
 
 		}
 
@@ -167,19 +174,37 @@ class ArticleController extends Controller
     }
 	// -----------------------------------------------------------
 	// Uncomment the following methods and override them if needed
-	/*
+	
 	public function filters()
 	{
 		// return the filter configuration for this controller, e.g.:
 		return array(
-			'inlineFilterName',
-			array(
-				'class'=>'path.to.FilterClass',
-				'propertyName'=>'propertyValue',
-			),
+		      'accessControl'
 		);
 	}
 
+    /**
+     * 设置过滤权限
+     * @author Red-Bo
+     * @date 2016-03-29 00:36:16
+     */
+    public function accessRules()
+    {
+        // 先允许所有登录的用户进行操作
+        return array(
+            array(
+                'allow',
+                'actions' => array('Index','Del','Add','Edit'),
+                'users' => array('@')
+            ),
+            array(
+                'deny',
+                'users' => array('*'),
+            ),
+        );
+
+    }
+/*
 	public function actions()
 	{
 		// return external action classes, e.g.:
@@ -190,7 +215,7 @@ class ArticleController extends Controller
 				'propertyName'=>'propertyValue',
 			),
 		);
-	}
-	*/
+	}*/
+	
 } 
 	
