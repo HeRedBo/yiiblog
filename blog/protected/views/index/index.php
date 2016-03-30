@@ -10,7 +10,7 @@
 					<li>
 						<div class='post-image'>
 							<span>
-								<a href="<?php echo $this->createUrl('article/index', array('aid'=>$v->aid)) ?>"><img width="" src="<?php echo BASEPATH ?>uploads/<?php echo $v->thumb ?>" /></a>
+								<a href="<?php echo $this->createUrl('article/index', array('aid'=>$v->aid)) ?>"><img width="" src="<?php echo Yii::app()->baseUrl; ?>/uploads/<?php echo $v->thumb ?>" /></a>
 							</span>	
 						</div>	
 						<div class='post-content'>
@@ -30,7 +30,7 @@
 					<li>
 						<div class='post-image'>
 							<span>
-								<a href="<?php echo $this->createUrl('article/index', array('aid'=>$v->aid)) ?>"><img width="" src="<?php echo BASEPATH ?>/uploads/<?php echo $v->thumb ?>" /></a>
+								<a href="<?php echo $this->createUrl('article/index', array('aid'=>$v->aid)) ?>"><img width="" src="<?php echo Yii::app()->baseUrl; ?>/uploads/<?php echo $v->thumb ?>" /></a>
 							</span>	
 						</div>	
 						<div class='post-content'>

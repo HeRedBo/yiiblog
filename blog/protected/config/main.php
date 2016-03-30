@@ -47,6 +47,9 @@ return array(
 		'thumb' =>  array(
 			'class' => 'ext.Thumb.CThumb', //路径别名
 		),
+		'cache' => array(
+			'class' => 'system.caching.CFileCache',
+			),
 		
 
 		// uncomment the following to enable URLs in path-format 

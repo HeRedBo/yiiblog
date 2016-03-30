@@ -15,7 +15,15 @@
 		</div>
 		<div class='navigation'>
 			<a href="">首页</a>
-			
+			<?php 
+				$artModel = Article::model();
+				$common = $artModel->common();
+			 ?>
+			<?php foreach ($common['nav'] as $k => $v): ?>
+				 <a href="<?php echo $this->createUrl('category/index',array('cid' => $v['cid'])); ?>">
+				 <?php echo $v->cname;  ?>
+				 </a>
+			<?php endforeach ?>
 		</div>
 	</div>
 
@@ -25,7 +33,11 @@
 			<div class='item'>
 				<h2>文章标题</h2>
 				<ul class='flink'>
-					
+					<?php foreach ($common['title'] as $k => $v1): ?>
+						<li><a href="<?php echo $this->createUrl('article/index',array('aid' => $v1->aid )); ?>">
+						<?php echo $v1->title; ?></a>
+						</li>
+					<?php endforeach ?>
 				</ul>
 			</div>
 			

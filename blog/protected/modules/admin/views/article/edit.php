@@ -79,7 +79,7 @@
 			<tr>
 				<td><?php echo $form->labelEx($articleModel,'thumb'); ?></td>
 				<td>
-					<?php echo Yii::app()->baseUrl ; ?>
+					
 					<img src="<?php echo Yii::app()->baseUrl.'/uploads/'.$articleModel->thumb; ?>" alt="" />
 					<?php echo $form->fileField($articleModel,'thumb'); ?>
 					<?php echo $form->error($articleModel,'thumb'); ?> 

@@ -28,6 +28,7 @@ class Article extends CActiveRecord
 		return '{{article}}';
 	}
 
+	public $cate;
 
 	/**
 	 * @return array customized attribute labels (name=&gt;label)
@@ -85,6 +86,22 @@ class Article extends CActiveRecord
 			'cates' => array(self::BELONGS_TO,'Category','cid'),
 
 		);
+	}
+
+	/**
+	 * 顶部导航条方法
+	 * @author Red-Bo
+	 * @date 2016-03-30 00:08:21
+	 */
+	public function common()
+	{
+		$data = array();
+		$sql =   "SELECT cname,cid FROM {{category}} LIMIT 5";
+		$data['nav'] = Category::model()->findAllBySql($sql);
+		$sql = "SELECT title ,aid FROM {{article}} ORDER BY time DESC LIMIT 5";
+		$data['title'] = $this->findAllBySql($sql);
+		return $data;
+
 	}
 
 }
