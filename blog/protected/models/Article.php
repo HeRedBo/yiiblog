@@ -83,8 +83,7 @@ class Article extends CActiveRecord
 	{
 
 		return array(
-			'cates' => array(self::BELONGS_TO,'Category','cid'),
-
+			'cate' => array(self::BELONGS_TO,'Category','cid'),
 		);
 	}
 

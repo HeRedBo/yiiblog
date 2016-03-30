@@ -3502,3 +3502,39 @@ REQUEST_URI=/index.php?r=article/index&aid=40
 in D:\www\yiiblog\blog\protected\views\article\index.php (9)
 in D:\www\yiiblog\blog\protected\controllers\ArticleController.php (12)
 in D:\www\yiiblog\blog\index.php (17)
+2016/03/30 16:40:46 [error] [php] Trying to get property of non-object (D:\www\yiiblog\blog\protected\views\article\index.php:9)
+Stack trace:
+#0 D:\www\yiiblog\framework\web\CController.php(869): ArticleController->renderFile()
+#1 D:\www\yiiblog\framework\web\CController.php(782): ArticleController->renderPartial()
+#2 D:\www\yiiblog\blog\protected\controllers\ArticleController.php(12): ArticleController->render()
+#3 unknown(0): ArticleController->actionIndex()
+#4 D:\www\yiiblog\framework\web\actions\CAction.php(109): ReflectionMethod->invokeArgs()
+#5 D:\www\yiiblog\framework\web\actions\CInlineAction.php(47): CInlineAction->runWithParamsInternal()
+#6 D:\www\yiiblog\framework\web\CController.php(308): CInlineAction->runWithParams()
+#7 D:\www\yiiblog\framework\web\CController.php(286): ArticleController->runAction()
+#8 D:\www\yiiblog\framework\web\CController.php(265): ArticleController->runActionWithFilters()
+#9 D:\www\yiiblog\framework\web\CWebApplication.php(282): ArticleController->run()
+#10 D:\www\yiiblog\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#11 D:\www\yiiblog\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#12 D:\www\yiiblog\blog\index.php(17): CWebApplication->run()
+REQUEST_URI=/index.php?r=article/index&aid=28
+in D:\www\yiiblog\blog\protected\views\article\index.php (9)
+in D:\www\yiiblog\blog\protected\controllers\ArticleController.php (12)
+in D:\www\yiiblog\blog\index.php (17)
+2016/03/30 16:53:31 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "r=article/index&aid=28".' in D:\www\yiiblog\framework\web\CWebApplication.php:286
+Stack trace:
+#0 D:\www\yiiblog\framework\web\CWebApplication.php(141): CWebApplication->runController('r=article/index...')
+#1 D:\www\yiiblog\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#2 D:\www\yiiblog\blog\index.php(17): CApplication->run()
+#3 {main}
+REQUEST_URI=/r=article/index&aid=28
+---
+2016/03/30 16:53:32 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "favicon.ico".' in D:\www\yiiblog\framework\web\CWebApplication.php:286
+Stack trace:
+#0 D:\www\yiiblog\framework\web\CWebApplication.php(141): CWebApplication->runController('favicon.ico')
+#1 D:\www\yiiblog\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#2 D:\www\yiiblog\blog\index.php(17): CApplication->run()
+#3 {main}
+REQUEST_URI=/favicon.ico
+HTTP_REFERER=http://www.yiiblog.com/r=article/index&aid=28
+---

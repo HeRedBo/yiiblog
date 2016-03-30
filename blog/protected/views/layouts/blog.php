@@ -14,7 +14,7 @@
 			<a href=""><img src="<?php echo IMG_URL; ?>logo.jpg" alt=""></a>
 		</div>
 		<div class='navigation'>
-			<a href="">首页</a>
+			<a href="<?php echo $this->createUrl('./index.html'); ?>">首页</a>
 			<?php 
 				$artModel = Article::model();
 				$common = $artModel->common();

@@ -53,16 +53,21 @@ return array(
 		
 
 		// uncomment the following to enable URLs in path-format 
-		/*
+		
 		'urlManager'=>array(
 			'urlFormat'=>'path',
+			'showScriptName' => false, //隐藏index.php 文件
 			'rules'=>array(
-				'<controller:\w+>/<id:\d+>'=>'<controller>/view',
-				'<controller:\w+>/<action:\w+>/<id:\d+>'=>'<controller>/<action>',
-				'<controller:\w+>/<action:\w+>'=>'<controller>/<action>',
+				'index.html' => array('index'),
+				'a/<aid:\d+>'	=> array('article/index', 'urlSuffix'=>'.html'),
+				'c/<cid:\d+>'	=> array('category/index', 'urlSuffix'=>'.html'),
+
+				// '<controller:\w+>/<id:\d+>'=>'<controller>/view',
+				// '<controller:\w+>/<action:\w+>/<id:\d+>'=>'<controller>/<action>',
+				// '<controller:\w+>/<action:\w+>'=>'<controller>/<action>',
 			),
 		),
-		*/
+		
 
 		// database settings are configured in database.php
 		'db'=>require(dirname(__FILE__).'/database.php'),
@@ -71,7 +76,7 @@ return array(
 			// use 'site/error' action to display errors
 			'errorAction'=>YII_DEBUG ? null : 'site/error',
 		),
-
+		
 		'log'=>array(
 			'class'=>'CLogRouter',
 			'routes'=>array(
@@ -80,11 +85,11 @@ return array(
 					'levels'=>'error, warning',
 				),
 				// uncomment the following to show log messages on web pages
-				/*
+				
 				array(
 					'class'=>'CWebLogRoute',
 				),
-				*/
+				
 			),
 		),
 

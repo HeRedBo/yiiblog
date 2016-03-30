@@ -31,8 +31,13 @@ DROP TABLE IF EXISTS `yii_category`;
 CREATE TABLE `yii_category` (
 	`cid` int(10) unsigned NOT NULL AUTO_INCREMENT COMMENT '分类id',
 	`cname` varchar(30) NOT NULL DEFAULT "" COMMENT '分类名称',
-	PRIMARY KEY (`cid`)
-)
+	 PRIMARY KEY (`cid`)
+) ENGINE=InnoDB AUTO_INCREMENT=21 DEFAULT CHARSET=utf8;
+
+INSERT INTO `yii_category` VALUES ('15', '情感');
+INSERT INTO `yii_category` VALUES ('16', '生活');
+INSERT INTO `yii_category` VALUES ('17', '趣事');
+INSERT INTO `yii_category` VALUES ('18', '奇闻');
 
 # 文件上传测试表
 DROP TABLE IF EXISTS `yii_companynews`;
@@ -41,6 +46,6 @@ CREATE TABLE `yii_companynews` (
 	`news_pic` varchar(200) not null DEFAULT '' COMMENT '图片表',
 	`add_time` int not null DEFAULT 0 COMMENT '0',
 	PRIMARY KEY(`id`)
-) ENGINE=MyISAM CHARSET utf8 COMMENT '图片上传测试表';
+) ENGINE=InnoDB CHARSET utf8 COMMENT '图片上传测试表';
 
 

@@ -6,6 +6,21 @@
  */
 class IndexController extends Controller
 {
+	/**
+	 * 数据过滤方法 设置商品的缓存
+	 * @author Red-Bo
+	 * @date 2016-03-30 23:10:26
+	 */
+	
+	public function filters()
+	{
+		return array(
+			array(
+				'system.web.widgets.COutputCache + index',
+				'duration' => 30,
+				),
+		);
+	}
 	
 	/**
 	 * Index 主方法
