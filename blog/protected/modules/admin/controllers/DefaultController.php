@@ -19,7 +19,7 @@ class DefaultController extends Controller
         return array(
             array(
                     'allow',
-                    'actions' => array('del','copy'),
+                    'actions' => array('Index','Copy'),
                     'users'   => array('@'),
                 ),
             array(
@@ -29,12 +29,21 @@ class DefaultController extends Controller
         );
     }
     
+    /**
+     * 后台首页
+     * @author Red-Bo
+     * @date 2016-03-31 00:09:08
+     */
 	public function actionIndex()
 	{
-
 		$this->renderPartial('index');
 	}
 
+    /**
+     * 系统配置信息类
+     * @author Red-Bo
+     * @date 2016-03-31 00:09:25
+     */
 	public function actionCopy()
 	{
 		$this->renderPartial('copy');

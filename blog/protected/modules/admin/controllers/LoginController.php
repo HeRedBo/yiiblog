@@ -19,7 +19,7 @@
      	{
      		// 接收参数
      		$loginForm->attributes = $_POST['LoginForm'];
-
+            // 调用模型的保存方法进行数据的保存
      		if($loginForm->validate() && $loginForm->login())
      		{
      			// 登录成功 保存登录时间 跳转到后台系统首页
@@ -76,7 +76,6 @@
      {
         yii::app()->user->logout();
         $this->redirect(array('index'));
-
      }
     
      /**************************  ************************/

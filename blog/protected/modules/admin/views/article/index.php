@@ -26,7 +26,7 @@
 				<td><?php echo $v->aid; ?></td>
 				<td><?php echo $v->title ?></td>
 				<td><?php echo $v->cid; ?></td>
-				<td><img src="uploads/<?php echo $v->thumb; ?>" width="110" alt="" /></td>
+				<td><img src= "<?php echo Yii::app()->request->hostInfo;?>/uploads/<?php echo $v->thumb; ?>" width="110" alt="" /></td>
 				<td><?php echo date('h:i:s',$v->time); ?></td>
 				<td>
 					<a href="<?php echo $this->createUrl('Edit',array('aid' => $v->aid)); ?>" >[编辑]</a>

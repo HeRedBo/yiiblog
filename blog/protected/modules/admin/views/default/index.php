@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
 <head>
 	<meta http-equiv="Content-Type" content="text/html;charset=UTF-8" />
-	<title>后盾网HDPHP许愿墙后台管理首页</title>
+	<title>yii1 博客后台管理系统</title>
 	<link rel="stylesheet" href="<?php echo ADMIN_CSS_URL
  ?>admin.css" />
 	<script type="text/javascript" src="<?php echo ADMIN_JS_URL ?>jquery-1.7.2.min.js"></script>

@@ -3538,3 +3538,385 @@ Stack trace:
 REQUEST_URI=/favicon.ico
 HTTP_REFERER=http://www.yiiblog.com/r=article/index&aid=28
 ---
+2016/04/01 19:01:55 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "favicon.ico".' in D:\www\yiiblog\framework\web\CWebApplication.php:286
+Stack trace:
+#0 D:\www\yiiblog\framework\web\CWebApplication.php(141): CWebApplication->runController('favicon.ico')
+#1 D:\www\yiiblog\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#2 D:\www\yiiblog\blog\index.php(17): CApplication->run()
+#3 {main}
+REQUEST_URI=/favicon.ico
+HTTP_REFERER=http://www.yiiblog.com/
+---
+2016/04/01 19:02:17 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "admin/index/index".' in D:\www\yiiblog\framework\web\CWebApplication.php:286
+Stack trace:
+#0 D:\www\yiiblog\framework\web\CWebApplication.php(141): CWebApplication->runController('admin/index/ind...')
+#1 D:\www\yiiblog\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#2 D:\www\yiiblog\blog\index.php(17): CApplication->run()
+#3 {main}
+REQUEST_URI=/admin/index/index
+---
+2016/04/01 19:02:48 [error] [exception.CHttpException.403] exception 'CHttpException' with message 'You are not authorized to perform this action.' in D:\www\yiiblog\framework\web\auth\CAccessControlFilter.php:182
+Stack trace:
+#0 D:\www\yiiblog\framework\web\auth\CAccessControlFilter.php(145): CAccessControlFilter->accessDenied(Object(CWebUser), 'You are not aut...')
+#1 D:\www\yiiblog\framework\web\filters\CFilter.php(38): CAccessControlFilter->preFilter(Object(CFilterChain))
+#2 D:\www\yiiblog\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#3 D:\www\yiiblog\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#4 D:\www\yiiblog\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#5 D:\www\yiiblog\framework\web\CController.php(291): CFilterChain->run()
+#6 D:\www\yiiblog\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 D:\www\yiiblog\framework\web\CWebApplication.php(282): CController->run('index')
+#8 D:\www\yiiblog\framework\web\CWebApplication.php(141): CWebApplication->runController('admin/default/i...')
+#9 D:\www\yiiblog\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#10 D:\www\yiiblog\blog\index.php(17): CApplication->run()
+#11 {main}
+REQUEST_URI=/admin/default/index
+HTTP_REFERER=http://www.yiiblog.com/admin/login/index
+---
+2016/04/01 19:03:32 [error] [exception.CHttpException.403] exception 'CHttpException' with message 'You are not authorized to perform this action.' in D:\www\yiiblog\framework\web\auth\CAccessControlFilter.php:182
+Stack trace:
+#0 D:\www\yiiblog\framework\web\auth\CAccessControlFilter.php(145): CAccessControlFilter->accessDenied(Object(CWebUser), 'You are not aut...')
+#1 D:\www\yiiblog\framework\web\filters\CFilter.php(38): CAccessControlFilter->preFilter(Object(CFilterChain))
+#2 D:\www\yiiblog\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#3 D:\www\yiiblog\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#4 D:\www\yiiblog\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#5 D:\www\yiiblog\framework\web\CController.php(291): CFilterChain->run()
+#6 D:\www\yiiblog\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 D:\www\yiiblog\framework\web\CWebApplication.php(282): CController->run('index')
+#8 D:\www\yiiblog\framework\web\CWebApplication.php(141): CWebApplication->runController('admin/default/i...')
+#9 D:\www\yiiblog\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#10 D:\www\yiiblog\blog\index.php(17): CApplication->run()
+#11 {main}
+REQUEST_URI=/admin/default/index
+---
+2016/04/01 19:03:35 [error] [exception.CHttpException.403] exception 'CHttpException' with message 'You are not authorized to perform this action.' in D:\www\yiiblog\framework\web\auth\CAccessControlFilter.php:182
+Stack trace:
+#0 D:\www\yiiblog\framework\web\auth\CAccessControlFilter.php(145): CAccessControlFilter->accessDenied(Object(CWebUser), 'You are not aut...')
+#1 D:\www\yiiblog\framework\web\filters\CFilter.php(38): CAccessControlFilter->preFilter(Object(CFilterChain))
+#2 D:\www\yiiblog\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#3 D:\www\yiiblog\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#4 D:\www\yiiblog\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#5 D:\www\yiiblog\framework\web\CController.php(291): CFilterChain->run()
+#6 D:\www\yiiblog\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 D:\www\yiiblog\framework\web\CWebApplication.php(282): CController->run('index')
+#8 D:\www\yiiblog\framework\web\CWebApplication.php(141): CWebApplication->runController('admin/default/i...')
+#9 D:\www\yiiblog\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#10 D:\www\yiiblog\blog\index.php(17): CApplication->run()
+#11 {main}
+REQUEST_URI=/admin/default/index
+---
+2016/04/01 19:03:44 [error] [exception.CHttpException.403] exception 'CHttpException' with message 'You are not authorized to perform this action.' in D:\www\yiiblog\framework\web\auth\CAccessControlFilter.php:182
+Stack trace:
+#0 D:\www\yiiblog\framework\web\auth\CAccessControlFilter.php(145): CAccessControlFilter->accessDenied(Object(CWebUser), 'You are not aut...')
+#1 D:\www\yiiblog\framework\web\filters\CFilter.php(38): CAccessControlFilter->preFilter(Object(CFilterChain))
+#2 D:\www\yiiblog\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#3 D:\www\yiiblog\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#4 D:\www\yiiblog\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#5 D:\www\yiiblog\framework\web\CController.php(291): CFilterChain->run()
+#6 D:\www\yiiblog\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 D:\www\yiiblog\framework\web\CWebApplication.php(282): CController->run('index')
+#8 D:\www\yiiblog\framework\web\CWebApplication.php(141): CWebApplication->runController('admin/default/i...')
+#9 D:\www\yiiblog\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#10 D:\www\yiiblog\blog\index.php(17): CApplication->run()
+#11 {main}
+REQUEST_URI=/admin/default/index
+---
+2016/04/01 19:04:06 [error] [exception.CHttpException.403] exception 'CHttpException' with message 'You are not authorized to perform this action.' in D:\www\yiiblog\framework\web\auth\CAccessControlFilter.php:182
+Stack trace:
+#0 D:\www\yiiblog\framework\web\auth\CAccessControlFilter.php(145): CAccessControlFilter->accessDenied(Object(CWebUser), 'You are not aut...')
+#1 D:\www\yiiblog\framework\web\filters\CFilter.php(38): CAccessControlFilter->preFilter(Object(CFilterChain))
+#2 D:\www\yiiblog\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#3 D:\www\yiiblog\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#4 D:\www\yiiblog\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#5 D:\www\yiiblog\framework\web\CController.php(291): CFilterChain->run()
+#6 D:\www\yiiblog\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 D:\www\yiiblog\framework\web\CWebApplication.php(282): CController->run('index')
+#8 D:\www\yiiblog\framework\web\CWebApplication.php(141): CWebApplication->runController('admin/default/i...')
+#9 D:\www\yiiblog\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#10 D:\www\yiiblog\blog\index.php(17): CApplication->run()
+#11 {main}
+REQUEST_URI=/admin/default/index
+---
+2016/04/01 19:04:16 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "copyy".' in D:\www\yiiblog\framework\web\CController.php:483
+Stack trace:
+#0 D:\www\yiiblog\framework\web\CController.php(270): CController->missingAction('copyy')
+#1 D:\www\yiiblog\framework\web\CWebApplication.php(282): CController->run('copyy')
+#2 D:\www\yiiblog\framework\web\CWebApplication.php(141): CWebApplication->runController('admin/default/c...')
+#3 D:\www\yiiblog\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#4 D:\www\yiiblog\blog\index.php(17): CApplication->run()
+#5 {main}
+REQUEST_URI=/admin/default/copyy/
+---
+2016/04/01 19:04:20 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "assets/admin/css/images/1_111219133417_2_03.gif".' in D:\www\yiiblog\framework\web\CWebApplication.php:286
+Stack trace:
+#0 D:\www\yiiblog\framework\web\CWebApplication.php(141): CWebApplication->runController('assets/admin/cs...')
+#1 D:\www\yiiblog\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#2 D:\www\yiiblog\blog\index.php(17): CApplication->run()
+#3 {main}
+REQUEST_URI=/assets/admin/css/images/1_111219133417_2_03.gif
+HTTP_REFERER=http://www.yiiblog.com/assets/admin/css//public.css
+---
+2016/04/01 19:04:20 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "assets/admin/css/images/user.png".' in D:\www\yiiblog\framework\web\CWebApplication.php:286
+Stack trace:
+#0 D:\www\yiiblog\framework\web\CWebApplication.php(141): CWebApplication->runController('assets/admin/cs...')
+#1 D:\www\yiiblog\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#2 D:\www\yiiblog\blog\index.php(17): CApplication->run()
+#3 {main}
+REQUEST_URI=/assets/admin/css/images/user.png
+HTTP_REFERER=http://www.yiiblog.com/assets/admin/css//public.css
+---
+2016/04/01 19:04:20 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "assets/admin/css/images/base.png".' in D:\www\yiiblog\framework\web\CWebApplication.php:286
+Stack trace:
+#0 D:\www\yiiblog\framework\web\CWebApplication.php(141): CWebApplication->runController('assets/admin/cs...')
+#1 D:\www\yiiblog\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#2 D:\www\yiiblog\blog\index.php(17): CApplication->run()
+#3 {main}
+REQUEST_URI=/assets/admin/css/images/base.png
+HTTP_REFERER=http://www.yiiblog.com/assets/admin/css//public.css
+---
+2016/04/01 19:04:25 [error] [exception.CHttpException.403] exception 'CHttpException' with message 'You are not authorized to perform this action.' in D:\www\yiiblog\framework\web\auth\CAccessControlFilter.php:182
+Stack trace:
+#0 D:\www\yiiblog\framework\web\auth\CAccessControlFilter.php(145): CAccessControlFilter->accessDenied(Object(CWebUser), 'You are not aut...')
+#1 D:\www\yiiblog\framework\web\filters\CFilter.php(38): CAccessControlFilter->preFilter(Object(CFilterChain))
+#2 D:\www\yiiblog\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#3 D:\www\yiiblog\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#4 D:\www\yiiblog\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#5 D:\www\yiiblog\framework\web\CController.php(291): CFilterChain->run()
+#6 D:\www\yiiblog\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 D:\www\yiiblog\framework\web\CWebApplication.php(282): CController->run('index')
+#8 D:\www\yiiblog\framework\web\CWebApplication.php(141): CWebApplication->runController('admin/default/i...')
+#9 D:\www\yiiblog\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#10 D:\www\yiiblog\blog\index.php(17): CApplication->run()
+#11 {main}
+REQUEST_URI=/admin/default/index
+---
+2016/04/01 19:04:55 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "assets/admin/css/images/base.png".' in D:\www\yiiblog\framework\web\CWebApplication.php:286
+Stack trace:
+#0 D:\www\yiiblog\framework\web\CWebApplication.php(141): CWebApplication->runController('assets/admin/cs...')
+#1 D:\www\yiiblog\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#2 D:\www\yiiblog\blog\index.php(17): CApplication->run()
+#3 {main}
+REQUEST_URI=/assets/admin/css/images/base.png
+HTTP_REFERER=http://www.yiiblog.com/assets/admin/css//public.css
+---
+2016/04/01 19:04:55 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "assets/admin/css/images/user.png".' in D:\www\yiiblog\framework\web\CWebApplication.php:286
+Stack trace:
+#0 D:\www\yiiblog\framework\web\CWebApplication.php(141): CWebApplication->runController('assets/admin/cs...')
+#1 D:\www\yiiblog\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#2 D:\www\yiiblog\blog\index.php(17): CApplication->run()
+#3 {main}
+REQUEST_URI=/assets/admin/css/images/user.png
+HTTP_REFERER=http://www.yiiblog.com/assets/admin/css//public.css
+---
+2016/04/01 19:04:55 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "assets/admin/css/images/1_111219133417_2_03.gif".' in D:\www\yiiblog\framework\web\CWebApplication.php:286
+Stack trace:
+#0 D:\www\yiiblog\framework\web\CWebApplication.php(141): CWebApplication->runController('assets/admin/cs...')
+#1 D:\www\yiiblog\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#2 D:\www\yiiblog\blog\index.php(17): CApplication->run()
+#3 {main}
+REQUEST_URI=/assets/admin/css/images/1_111219133417_2_03.gif
+HTTP_REFERER=http://www.yiiblog.com/assets/admin/css//public.css
+---
+2016/04/01 19:05:28 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "uploads".' in D:\www\yiiblog\framework\web\CController.php:483
+Stack trace:
+#0 D:\www\yiiblog\framework\web\CController.php(270): CController->missingAction('uploads')
+#1 D:\www\yiiblog\framework\web\CWebApplication.php(282): CController->run('uploads')
+#2 D:\www\yiiblog\framework\web\CWebApplication.php(141): CWebApplication->runController('admin/article/u...')
+#3 D:\www\yiiblog\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#4 D:\www\yiiblog\blog\index.php(17): CApplication->run()
+#5 {main}
+REQUEST_URI=/admin/article/uploads/13837883784768.jpg
+HTTP_REFERER=http://www.yiiblog.com/admin/article/Index
+---
+2016/04/01 19:05:28 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "uploads".' in D:\www\yiiblog\framework\web\CController.php:483
+Stack trace:
+#0 D:\www\yiiblog\framework\web\CController.php(270): CController->missingAction('uploads')
+#1 D:\www\yiiblog\framework\web\CWebApplication.php(282): CController->run('uploads')
+#2 D:\www\yiiblog\framework\web\CWebApplication.php(141): CWebApplication->runController('admin/article/u...')
+#3 D:\www\yiiblog\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#4 D:\www\yiiblog\blog\index.php(17): CApplication->run()
+#5 {main}
+REQUEST_URI=/admin/article/uploads/13838043822685.jpg
+HTTP_REFERER=http://www.yiiblog.com/admin/article/Index
+---
+2016/04/01 19:05:28 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "uploads".' in D:\www\yiiblog\framework\web\CController.php:483
+Stack trace:
+#0 D:\www\yiiblog\framework\web\CController.php(270): CController->missingAction('uploads')
+#1 D:\www\yiiblog\framework\web\CWebApplication.php(282): CController->run('uploads')
+#2 D:\www\yiiblog\framework\web\CWebApplication.php(141): CWebApplication->runController('admin/article/u...')
+#3 D:\www\yiiblog\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#4 D:\www\yiiblog\blog\index.php(17): CApplication->run()
+#5 {main}
+REQUEST_URI=/admin/article/uploads/13837882604130.jpg
+HTTP_REFERER=http://www.yiiblog.com/admin/article/Index
+---
+2016/04/01 19:08:50 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "uploads".' in D:\www\yiiblog\framework\web\CController.php:483
+Stack trace:
+#0 D:\www\yiiblog\framework\web\CController.php(270): CController->missingAction('uploads')
+#1 D:\www\yiiblog\framework\web\CWebApplication.php(282): CController->run('uploads')
+#2 D:\www\yiiblog\framework\web\CWebApplication.php(141): CWebApplication->runController('admin/article/u...')
+#3 D:\www\yiiblog\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#4 D:\www\yiiblog\blog\index.php(17): CApplication->run()
+#5 {main}
+REQUEST_URI=/admin/article/uploads/13838043822685.jpg%20Failed%20to%20load%20resource:%20the%20server%20responded%20with%20a%20status%20of%20404%20(Not%20Found)
+---
+2016/04/01 19:08:57 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "uploads".' in D:\www\yiiblog\framework\web\CController.php:483
+Stack trace:
+#0 D:\www\yiiblog\framework\web\CController.php(270): CController->missingAction('uploads')
+#1 D:\www\yiiblog\framework\web\CWebApplication.php(282): CController->run('uploads')
+#2 D:\www\yiiblog\framework\web\CWebApplication.php(141): CWebApplication->runController('admin/article/u...')
+#3 D:\www\yiiblog\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#4 D:\www\yiiblog\blog\index.php(17): CApplication->run()
+#5 {main}
+REQUEST_URI=/admin/article/uploads/13838043822685.jpg%20Failed%20to%20load%20resource:%20the%20server%20responded%20with%20a%20status%20of%20404%20(Not%20Found)
+---
+2016/04/01 19:09:04 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "uploads".' in D:\www\yiiblog\framework\web\CController.php:483
+Stack trace:
+#0 D:\www\yiiblog\framework\web\CController.php(270): CController->missingAction('uploads')
+#1 D:\www\yiiblog\framework\web\CWebApplication.php(282): CController->run('uploads')
+#2 D:\www\yiiblog\framework\web\CWebApplication.php(141): CWebApplication->runController('admin/article/u...')
+#3 D:\www\yiiblog\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#4 D:\www\yiiblog\blog\index.php(17): CApplication->run()
+#5 {main}
+REQUEST_URI=/admin/article/uploads/13838043822685.jpg
+---
+2016/04/01 19:09:37 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "assets/admin/css/images/1_111219133417_2_03.gif".' in D:\www\yiiblog\framework\web\CWebApplication.php:286
+Stack trace:
+#0 D:\www\yiiblog\framework\web\CWebApplication.php(141): CWebApplication->runController('assets/admin/cs...')
+#1 D:\www\yiiblog\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#2 D:\www\yiiblog\blog\index.php(17): CApplication->run()
+#3 {main}
+REQUEST_URI=/assets/admin/css/images/1_111219133417_2_03.gif
+HTTP_REFERER=http://www.yiiblog.com/assets/admin/css//public.css
+---
+2016/04/01 19:09:37 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "assets/admin/css/images/base.png".' in D:\www\yiiblog\framework\web\CWebApplication.php:286
+Stack trace:
+#0 D:\www\yiiblog\framework\web\CWebApplication.php(141): CWebApplication->runController('assets/admin/cs...')
+#1 D:\www\yiiblog\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#2 D:\www\yiiblog\blog\index.php(17): CApplication->run()
+#3 {main}
+REQUEST_URI=/assets/admin/css/images/base.png
+HTTP_REFERER=http://www.yiiblog.com/assets/admin/css//public.css
+---
+2016/04/01 19:09:37 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "assets/admin/css/images/user.png".' in D:\www\yiiblog\framework\web\CWebApplication.php:286
+Stack trace:
+#0 D:\www\yiiblog\framework\web\CWebApplication.php(141): CWebApplication->runController('assets/admin/cs...')
+#1 D:\www\yiiblog\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#2 D:\www\yiiblog\blog\index.php(17): CApplication->run()
+#3 {main}
+REQUEST_URI=/assets/admin/css/images/user.png
+HTTP_REFERER=http://www.yiiblog.com/assets/admin/css//public.css
+---
+2016/04/01 19:09:42 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "uploads".' in D:\www\yiiblog\framework\web\CController.php:483
+Stack trace:
+#0 D:\www\yiiblog\framework\web\CController.php(270): CController->missingAction('uploads')
+#1 D:\www\yiiblog\framework\web\CWebApplication.php(282): CController->run('uploads')
+#2 D:\www\yiiblog\framework\web\CWebApplication.php(141): CWebApplication->runController('admin/article/u...')
+#3 D:\www\yiiblog\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#4 D:\www\yiiblog\blog\index.php(17): CApplication->run()
+#5 {main}
+REQUEST_URI=/admin/article/uploads/13837883784768.jpg
+HTTP_REFERER=http://www.yiiblog.com/admin/article/Index
+---
+2016/04/01 19:09:42 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "uploads".' in D:\www\yiiblog\framework\web\CController.php:483
+Stack trace:
+#0 D:\www\yiiblog\framework\web\CController.php(270): CController->missingAction('uploads')
+#1 D:\www\yiiblog\framework\web\CWebApplication.php(282): CController->run('uploads')
+#2 D:\www\yiiblog\framework\web\CWebApplication.php(141): CWebApplication->runController('admin/article/u...')
+#3 D:\www\yiiblog\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#4 D:\www\yiiblog\blog\index.php(17): CApplication->run()
+#5 {main}
+REQUEST_URI=/admin/article/uploads/13837882604130.jpg
+HTTP_REFERER=http://www.yiiblog.com/admin/article/Index
+---
+2016/04/01 19:09:42 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "uploads".' in D:\www\yiiblog\framework\web\CController.php:483
+Stack trace:
+#0 D:\www\yiiblog\framework\web\CController.php(270): CController->missingAction('uploads')
+#1 D:\www\yiiblog\framework\web\CWebApplication.php(282): CController->run('uploads')
+#2 D:\www\yiiblog\framework\web\CWebApplication.php(141): CWebApplication->runController('admin/article/u...')
+#3 D:\www\yiiblog\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#4 D:\www\yiiblog\blog\index.php(17): CApplication->run()
+#5 {main}
+REQUEST_URI=/admin/article/uploads/13838043822685.jpg
+HTTP_REFERER=http://www.yiiblog.com/admin/article/Index
+---
+2016/04/01 19:12:59 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "assets/admin/css/images/1_111219133417_2_03.gif".' in D:\www\yiiblog\framework\web\CWebApplication.php:286
+Stack trace:
+#0 D:\www\yiiblog\framework\web\CWebApplication.php(141): CWebApplication->runController('assets/admin/cs...')
+#1 D:\www\yiiblog\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#2 D:\www\yiiblog\blog\index.php(17): CApplication->run()
+#3 {main}
+REQUEST_URI=/assets/admin/css/images/1_111219133417_2_03.gif
+HTTP_REFERER=http://www.yiiblog.com/assets/admin/css//public.css
+---
+2016/04/01 19:12:59 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "assets/admin/css/images/base.png".' in D:\www\yiiblog\framework\web\CWebApplication.php:286
+Stack trace:
+#0 D:\www\yiiblog\framework\web\CWebApplication.php(141): CWebApplication->runController('assets/admin/cs...')
+#1 D:\www\yiiblog\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#2 D:\www\yiiblog\blog\index.php(17): CApplication->run()
+#3 {main}
+REQUEST_URI=/assets/admin/css/images/base.png
+HTTP_REFERER=http://www.yiiblog.com/assets/admin/css//public.css
+---
+2016/04/01 19:12:59 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "assets/admin/css/images/user.png".' in D:\www\yiiblog\framework\web\CWebApplication.php:286
+Stack trace:
+#0 D:\www\yiiblog\framework\web\CWebApplication.php(141): CWebApplication->runController('assets/admin/cs...')
+#1 D:\www\yiiblog\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#2 D:\www\yiiblog\blog\index.php(17): CApplication->run()
+#3 {main}
+REQUEST_URI=/assets/admin/css/images/user.png
+HTTP_REFERER=http://www.yiiblog.com/assets/admin/css//public.css
+---
+2016/04/01 19:17:29 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "uploads/.13838043822685.jpg".' in D:\www\yiiblog\framework\web\CWebApplication.php:286
+Stack trace:
+#0 D:\www\yiiblog\framework\web\CWebApplication.php(141): CWebApplication->runController('uploads/.138380...')
+#1 D:\www\yiiblog\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#2 D:\www\yiiblog\blog\index.php(17): CApplication->run()
+#3 {main}
+REQUEST_URI=/uploads/.13838043822685.jpg
+HTTP_REFERER=http://www.yiiblog.com/admin/article/Index
+---
+2016/04/01 19:17:29 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "uploads/.13837882604130.jpg".' in D:\www\yiiblog\framework\web\CWebApplication.php:286
+Stack trace:
+#0 D:\www\yiiblog\framework\web\CWebApplication.php(141): CWebApplication->runController('uploads/.138378...')
+#1 D:\www\yiiblog\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#2 D:\www\yiiblog\blog\index.php(17): CApplication->run()
+#3 {main}
+REQUEST_URI=/uploads/.13837882604130.jpg
+HTTP_REFERER=http://www.yiiblog.com/admin/article/Index
+---
+2016/04/01 19:17:29 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "uploads/.13837883784768.jpg".' in D:\www\yiiblog\framework\web\CWebApplication.php:286
+Stack trace:
+#0 D:\www\yiiblog\framework\web\CWebApplication.php(141): CWebApplication->runController('uploads/.138378...')
+#1 D:\www\yiiblog\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#2 D:\www\yiiblog\blog\index.php(17): CApplication->run()
+#3 {main}
+REQUEST_URI=/uploads/.13837883784768.jpg
+HTTP_REFERER=http://www.yiiblog.com/admin/article/Index
+---
+2016/04/01 19:17:34 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "uploads/.13838043822685.jpg".' in D:\www\yiiblog\framework\web\CWebApplication.php:286
+Stack trace:
+#0 D:\www\yiiblog\framework\web\CWebApplication.php(141): CWebApplication->runController('uploads/.138380...')
+#1 D:\www\yiiblog\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#2 D:\www\yiiblog\blog\index.php(17): CApplication->run()
+#3 {main}
+REQUEST_URI=/uploads/.13838043822685.jpg
+HTTP_REFERER=http://www.yiiblog.com/admin/article/Index
+---
+2016/04/01 19:17:34 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "uploads/.13837882604130.jpg".' in D:\www\yiiblog\framework\web\CWebApplication.php:286
+Stack trace:
+#0 D:\www\yiiblog\framework\web\CWebApplication.php(141): CWebApplication->runController('uploads/.138378...')
+#1 D:\www\yiiblog\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#2 D:\www\yiiblog\blog\index.php(17): CApplication->run()
+#3 {main}
+REQUEST_URI=/uploads/.13837882604130.jpg
+HTTP_REFERER=http://www.yiiblog.com/admin/article/Index
+---
+2016/04/01 19:17:34 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "uploads/.13837883784768.jpg".' in D:\www\yiiblog\framework\web\CWebApplication.php:286
+Stack trace:
+#0 D:\www\yiiblog\framework\web\CWebApplication.php(141): CWebApplication->runController('uploads/.138378...')
+#1 D:\www\yiiblog\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#2 D:\www\yiiblog\blog\index.php(17): CApplication->run()
+#3 {main}
+REQUEST_URI=/uploads/.13837883784768.jpg
+HTTP_REFERER=http://www.yiiblog.com/admin/article/Index
+---
